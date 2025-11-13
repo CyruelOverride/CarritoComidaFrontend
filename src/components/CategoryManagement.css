@@ -1,0 +1,144 @@
+.category-management {
+  padding: 2rem;
+}
+
+.management-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.management-header h2 {
+  font-size: 1.75rem;
+  color: var(--gray-800);
+}
+
+.form-card {
+  margin-bottom: 2rem;
+  animation: slideIn 0.3s ease;
+}
+
+.form-actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-end;
+  margin-top: 1.5rem;
+}
+
+.btn-secondary {
+  background: var(--gray-600);
+  color: white;
+}
+
+.btn-secondary:hover {
+  background: var(--gray-700);
+}
+
+/* Lista de categorías */
+.categorias-list {
+  margin-top: 2rem;
+}
+
+.categorias-list h3 {
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+  color: var(--gray-700);
+}
+
+.categorias-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1rem;
+}
+
+.categoria-card {
+  background: white;
+  border: 2px solid var(--gray-200);
+  border-radius: 12px;
+  padding: 1.5rem;
+  transition: all 0.2s;
+}
+
+.categoria-card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-color: var(--primary);
+}
+
+.categoria-info {
+  margin-bottom: 1rem;
+}
+
+.categoria-info h4 {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+  color: var(--gray-800);
+}
+
+.categoria-descripcion {
+  font-size: 0.875rem;
+  color: var(--gray-600);
+  margin-bottom: 0.75rem;
+  line-height: 1.4;
+}
+
+.categoria-count {
+  display: inline-block;
+  background: var(--gray-100);
+  color: var(--gray-700);
+  padding: 0.25rem 0.75rem;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.categoria-actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+/* Alert */
+.alert {
+  padding: 1rem;
+  border-radius: 6px;
+  margin-bottom: 1rem;
+  animation: slideIn 0.3s ease;
+}
+
+.alert-success {
+  background: #d1fae5;
+  color: #065f46;
+  border: 1px solid #6ee7b7;
+}
+
+.alert-error {
+  background: #fee2e2;
+  color: #991b1b;
+  border: 1px solid #fca5a5;
+}
+
+/* Responsive */
+@media (max-width: 767px) {
+  .category-management {
+    padding: 1rem;
+  }
+
+  .management-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .categorias-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .form-actions {
+    flex-direction: column-reverse;
+  }
+
+  .form-actions button {
+    width: 100%;
+  }
+}
+

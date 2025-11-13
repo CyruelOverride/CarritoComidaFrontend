@@ -1,0 +1,24 @@
+.empty-state {
+  text-align: center;
+  padding: 2rem;
+  color: var(--gray-600);
+}
+
+.empty-state p {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+.cart-total {
+  border-top: 2px solid var(--gray-200);
+  padding-top: 1rem;
+  margin-top: 1rem;
+}
+
+.cart-total h3 {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.5rem;
+  color: var(--primary);
+}
+

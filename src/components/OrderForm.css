@@ -1,0 +1,38 @@
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.form-group label {
+  display: block;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  color: var(--gray-700);
+}
+
+.form-control {
+  width: 100%;
+  padding: 0.75rem;
+  border: 2px solid var(--gray-200);
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: border-color 0.2s;
+  font-family: inherit;
+}
+
+.form-control:focus {
+  outline: none;
+  border-color: var(--primary);
+}
+
+.form-control:disabled {
+  background-color: var(--gray-100);
+  cursor: not-allowed;
+}
+
+.cambio-info {
+  color: var(--success);
+  display: block;
+  margin-top: 0.5rem;
+  font-weight: 500;
+}
+
