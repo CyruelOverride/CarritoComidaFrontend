@@ -4,8 +4,8 @@
 export const productos = [
   {
     id: 1,
-    nombre: "Hamburguesa",
-    precio: 320,
+    nombre: "Hamburguesa Clasica",
+    precio: 250,
     tiempoPreparacion: 20,
     categoriaId: 2,
     categoria: {
@@ -18,7 +18,7 @@ export const productos = [
   },
   {
     id: 2,
-    nombre: "Hamburguesa con fritas",
+    nombre: "Combo Hamburguesa con fritas",
     precio: 380,
     tiempoPreparacion: 25,
     categoriaId: 2,
@@ -47,7 +47,7 @@ export const productos = [
   {
     id: 4,
     nombre: "Hamburguesa con cheddar",
-    precio: 340,
+    precio: 300,
     tiempoPreparacion: 22,
     categoriaId: 2,
     categoria: {
@@ -75,7 +75,7 @@ export const productos = [
   {
     id: 6,
     nombre: "Promo 2 hamburguesas clasicas",
-    precio: 370,
+    precio: 390,
     tiempoPreparacion: 25,
     categoriaId: 2,
     categoria: {
