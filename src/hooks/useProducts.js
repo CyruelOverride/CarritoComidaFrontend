@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { obtenerProductos } from '../services/api';
+import productosData from '../data/products';
 
 function useProducts() {
   const [productos, setProductos] = useState([]);
@@ -10,10 +10,10 @@ function useProducts() {
     cargarProductos();
   }, []);
 
-  const cargarProductos = async () => {
+  const cargarProductos = () => {
     try {
-      const data = await obtenerProductos();
-      setProductos(data);
+      // Usar datos estáticos en lugar de API
+      setProductos(productosData);
       setLoading(false);
     } catch (err) {
       console.error('Error al cargar productos:', err);

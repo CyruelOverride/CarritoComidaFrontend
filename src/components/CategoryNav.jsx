@@ -1,30 +1,10 @@
-import { useState, useEffect } from 'react';
-import { obtenerCategorias } from '../services/api';
+import categoriasData from '../data/categories';
 import './CategoryNav.css';
 
 function CategoryNav({ categoriaSeleccionada, onCategoriaChange }) {
-  const [categorias, setCategorias] = useState([]);
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    cargarCategorias();
-  }, []);
-
-  const cargarCategorias = async () => {
-    try {
-      const data = await obtenerCategorias();
-      // Agregar "Destacados" como primera opción
-      setCategorias([{ id: 'todos', nombre: 'Destacados' }, ...data]);
-      setLoading(false);
-    } catch (err) {
-      console.error('Error al cargar categorías:', err);
-      setLoading(false);
-    }
-  };
-
-  if (loading) {
-    return <div className="category-nav-loading">Cargando categorías...</div>;
-  }
+  // Usar datos estáticos en lugar de API
+  // Agregar "Destacados" como primera opción
+  const categorias = [{ id: 'todos', nombre: 'Destacados' }, ...categoriasData];
 
   return (
     <div className="category-nav-wrapper">

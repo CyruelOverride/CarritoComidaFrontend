@@ -1,5 +1,5 @@
 import { useNavigate } from 'react-router-dom';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import Header from '../components/Header';
 import CategoryNav from '../components/CategoryNav';
 import Alert from '../components/Alert';
@@ -7,7 +7,7 @@ import ProductGrid from '../components/ProductGrid';
 import Loading from '../components/Loading';
 import useProducts from '../hooks/useProducts';
 import useCart from '../hooks/useCart';
-import { obtenerCategorias } from '../services/api';
+import categoriasData from '../data/categories';
 import './ShopPage.css';
 
 function ShopPage() {
@@ -15,21 +15,8 @@ function ShopPage() {
   const { carrito, agregarAlCarrito } = useCart();
   const [alert, setAlert] = useState(null);
   const [categoriaSeleccionada, setCategoriaSeleccionada] = useState('todos');
-  const [categorias, setCategorias] = useState([]);
+  const categorias = categoriasData; // Usar datos estáticos
   const navigate = useNavigate();
-
-  useEffect(() => {
-    cargarCategorias();
-  }, []);
-
-  const cargarCategorias = async () => {
-    try {
-      const data = await obtenerCategorias();
-      setCategorias(data);
-    } catch (err) {
-      console.error('Error al cargar categorías:', err);
-    }
-  };
 
   const mostrarAlerta = (mensaje, tipo) => {
     setAlert({ mensaje, tipo });

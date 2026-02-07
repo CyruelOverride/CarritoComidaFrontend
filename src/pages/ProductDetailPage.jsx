@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react';
 import useCart from '../hooks/useCart';
 import Loading from '../components/Loading';
 import Navbar from '../components/Navbar';
-import { obtenerProducto } from '../services/api';
+import productosData from '../data/products';
 import { getImageUrl } from '../utils/imageHelper';
 import './ProductDetailPage.css';
 
@@ -30,18 +30,14 @@ function ProductDetailPage() {
   ];
 
   useEffect(() => {
-    const fetchProducto = async () => {
-      try {
-        const data = await obtenerProducto(id);
-        setProducto(data);
-      } catch (err) {
-        setError(err.message || 'Error al cargar el producto');
-      } finally {
-        setLoading(false);
-      }
-    };
-
-    fetchProducto();
+    // Usar datos estáticos en lugar de API
+    const productoEncontrado = productosData.find(p => p.id === parseInt(id));
+    if (productoEncontrado) {
+      setProducto(productoEncontrado);
+    } else {
+      setError('Producto no encontrado');
+    }
+    setLoading(false);
   }, [id]);
 
   const handleCantidadChange = (delta) => {
