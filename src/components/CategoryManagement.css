@@ -11,7 +11,8 @@
 
 .management-header h2 {
   font-size: 1.75rem;
-  color: var(--gray-800);
+  color: var(--gray-900);
+  font-weight: 700;
 }
 
 .form-card {
@@ -28,11 +29,13 @@
 
 .btn-secondary {
   background: var(--gray-600);
-  color: white;
+  color: var(--white);
+  border: none;
 }
 
 .btn-secondary:hover {
   background: var(--gray-700);
+  box-shadow: var(--shadow-md);
 }
 
 /* Lista de categorías */
@@ -43,7 +46,8 @@
 .categorias-list h3 {
   font-size: 1.25rem;
   margin-bottom: 1rem;
-  color: var(--gray-700);
+  color: var(--gray-900);
+  font-weight: 700;
 }
 
 .categorias-grid {
@@ -53,15 +57,16 @@
 }
 
 .categoria-card {
-  background: white;
-  border: 2px solid var(--gray-200);
+  background: var(--white);
+  border: 2px solid var(--gray-300);
   border-radius: 12px;
   padding: 1.5rem;
   transition: all 0.2s;
+  box-shadow: var(--shadow-sm);
 }
 
 .categoria-card:hover {
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  box-shadow: var(--shadow-lg);
   border-color: var(--primary);
 }
 
@@ -72,7 +77,8 @@
 .categoria-info h4 {
   font-size: 1.25rem;
   margin-bottom: 0.5rem;
-  color: var(--gray-800);
+  color: var(--gray-900);
+  font-weight: 700;
 }
 
 .categoria-descripcion {
@@ -84,8 +90,8 @@
 
 .categoria-count {
   display: inline-block;
-  background: var(--gray-100);
-  color: var(--gray-700);
+  background: var(--primary);
+  color: var(--white);
   padding: 0.25rem 0.75rem;
   border-radius: 12px;
   font-size: 0.75rem;
@@ -106,15 +112,15 @@
 }
 
 .alert-success {
-  background: #d1fae5;
-  color: #065f46;
-  border: 1px solid #6ee7b7;
+  background: var(--gray-50);
+  color: var(--success);
+  border: 2px solid var(--success);
 }
 
 .alert-error {
-  background: #fee2e2;
-  color: #991b1b;
-  border: 1px solid #fca5a5;
+  background: var(--gray-50);
+  color: var(--danger);
+  border: 2px solid var(--danger);
 }
 
 /* Responsive */

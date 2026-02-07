@@ -11,7 +11,8 @@
 
 .management-header h2 {
   font-size: 1.75rem;
-  color: var(--gray-800);
+  color: var(--gray-900);
+  font-weight: 700;
 }
 
 .form-card {
@@ -44,11 +45,13 @@
 
 .btn-secondary {
   background: var(--gray-600);
-  color: white;
+  color: var(--white);
+  border: none;
 }
 
 .btn-secondary:hover {
   background: var(--gray-700);
+  box-shadow: var(--shadow-md);
 }
 
 /* Lista de productos */
@@ -59,7 +62,8 @@
 .productos-list h3 {
   font-size: 1.25rem;
   margin-bottom: 1rem;
-  color: var(--gray-700);
+  color: var(--gray-900);
+  font-weight: 700;
 }
 
 .productos-table {
@@ -69,8 +73,8 @@
 }
 
 .producto-item {
-  background: white;
-  border: 1px solid var(--gray-200);
+  background: var(--white);
+  border: 2px solid var(--gray-300);
   border-radius: 8px;
   padding: 1rem;
   display: flex;
@@ -80,8 +84,8 @@
 }
 
 .producto-item:hover {
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  border-color: var(--gray-300);
+  box-shadow: var(--shadow-md);
+  border-color: var(--primary);
 }
 
 .producto-imagen {
@@ -106,7 +110,8 @@
 .producto-info h4 {
   font-size: 1.1rem;
   margin-bottom: 0.25rem;
-  color: var(--gray-800);
+  color: var(--gray-900);
+  font-weight: 600;
 }
 
 .producto-categoria {
@@ -148,15 +153,15 @@
 }
 
 .alert-success {
-  background: #d1fae5;
-  color: #065f46;
-  border: 1px solid #6ee7b7;
+  background: var(--gray-50);
+  color: var(--success);
+  border: 2px solid var(--success);
 }
 
 .alert-error {
-  background: #fee2e2;
-  color: #991b1b;
-  border: 1px solid #fca5a5;
+  background: var(--gray-50);
+  color: var(--danger);
+  border: 2px solid var(--danger);
 }
 
 /* Responsive */

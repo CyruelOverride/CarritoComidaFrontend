@@ -1,4 +1,4 @@
-const API_URL = 'http://localhost:3000';
+const API_URL = 'https://carritocomidaback.onrender.com';
 
 // ============ AUTENTICACIÓN ============
 export const loginUsuario = async (email, contrasena) => {

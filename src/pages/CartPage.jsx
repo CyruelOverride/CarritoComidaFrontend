@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import Header from '../components/Header';
 import Cart from '../components/Cart';
 import OrderForm from '../components/OrderForm';
 import Alert from '../components/Alert';
@@ -61,27 +62,32 @@ function CartPage() {
   };
 
   return (
-    <div className="container">
-      {alert && <Alert mensaje={alert.mensaje} tipo={alert.tipo} />}
+    <div className="cart-page">
+      <Header />
+      <div className="cart-page-container">
+        <div className="cart-page-content">
+          {alert && <Alert mensaje={alert.mensaje} tipo={alert.tipo} />}
 
-      <h1>🛒 Tu Carrito</h1>
+          <h1 className="cart-page-title">🛒 Tu Carrito</h1>
 
-      <Cart
-        carrito={carrito}
-        onActualizarCantidad={actualizarCantidad}
-        onEliminar={eliminarDelCarrito}
-        total={calcularTotal()}
-      />
+          <Cart
+            carrito={carrito}
+            onActualizarCantidad={actualizarCantidad}
+            onEliminar={eliminarDelCarrito}
+            total={calcularTotal()}
+          />
 
-      <OrderForm
-        total={calcularTotal()}
-        onEnviarPedido={handleEnviarPedido}
-        carritoVacio={carrito.length === 0}
-      />
+          <OrderForm
+            total={calcularTotal()}
+            onEnviarPedido={handleEnviarPedido}
+            carritoVacio={carrito.length === 0}
+          />
 
-      <button className="btn-secondary" onClick={() => navigate('/')}>
-        🔙 Seguir comprando
-      </button>
+          <button className="continue-shopping-btn" onClick={() => navigate('/')}>
+            🔙 Seguir comprando
+          </button>
+        </div>
+      </div>
     </div>
   );
 }

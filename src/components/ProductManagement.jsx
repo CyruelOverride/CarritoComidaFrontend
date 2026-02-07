@@ -251,7 +251,7 @@ function ProductManagement() {
               <div className="producto-info">
                 <h4>{producto.nombre}</h4>
                 <p className="producto-categoria">{producto.categoria?.nombre || 'Sin categoría'}</p>
-                <p className="producto-precio">${producto.precio.toFixed(2)}</p>
+                <p className="producto-precio">${Math.round(producto.precio)}</p>
                 <p className="producto-tiempo">⏱️ {producto.tiempoPreparacion} min</p>
                 {producto.imagenes && producto.imagenes.length > 1 && (
                   <small className="producto-imagenes-count">

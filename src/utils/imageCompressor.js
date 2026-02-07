@@ -14,12 +14,10 @@ export const compressImage = (file, maxWidth = 800, maxHeight = 800, quality = 0
       const img = new Image();
       
       img.onload = () => {
-        // Crear canvas para redimensionar
         const canvas = document.createElement('canvas');
         let width = img.width;
         let height = img.height;
         
-        // Calcular nuevas dimensiones manteniendo aspect ratio
         if (width > height) {
           if (width > maxWidth) {
             height *= maxWidth / width;
@@ -35,11 +33,9 @@ export const compressImage = (file, maxWidth = 800, maxHeight = 800, quality = 0
         canvas.width = width;
         canvas.height = height;
         
-        // Dibujar imagen redimensionada
         const ctx = canvas.getContext('2d');
         ctx.drawImage(img, 0, 0, width, height);
         
-        // Convertir a Base64 con compresión
         const compressedBase64 = canvas.toDataURL('image/jpeg', quality);
         resolve(compressedBase64);
       };
@@ -54,10 +50,9 @@ export const compressImage = (file, maxWidth = 800, maxHeight = 800, quality = 0
 };
 
 /**
- * Valida el tamaño de un archivo
- * @param {File} file - Archivo a validar
- * @param {number} maxSizeMB - Tamaño máximo en MB (default: 5MB)
- * @returns {boolean} - true si es válido
+ * @param {File} file 
+ * @param {number} maxSizeMB -
+ * @returns {boolean} -
  */
 export const validateFileSize = (file, maxSizeMB = 5) => {
   const maxSizeBytes = maxSizeMB * 1024 * 1024;

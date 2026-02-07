@@ -6,14 +6,16 @@
 }
 
 .alert-success {
-  background: #d1fae5;
-  color: #065f46;
-  border: 1px solid #6ee7b7;
+  background: var(--gray-50);
+  color: var(--success);
+  border: 2px solid var(--success);
+  font-weight: 500;
 }
 
 .alert-error {
-  background: #fee2e2;
-  color: #991b1b;
-  border: 1px solid #fca5a5;
+  background: var(--gray-50);
+  color: var(--danger);
+  border: 2px solid var(--danger);
+  font-weight: 500;
 }
 

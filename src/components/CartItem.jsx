@@ -1,11 +1,17 @@
+import { getImageUrl } from '../utils/imageHelper';
 import './CartItem.css';
 
 function CartItem({ item, onActualizarCantidad, onEliminar }) {
+  const imagenPrincipal = getImageUrl(item.imagenes?.[0]?.url);
+  
   return (
     <div className="cart-item">
+      <div className="cart-item-image">
+        <img src={imagenPrincipal} alt={item.nombre} />
+      </div>
       <div className="cart-item-info">
         <h4>{item.nombre}</h4>
-        <p>${item.precio.toFixed(2)} × {item.cantidad} = ${(item.precio * item.cantidad).toFixed(2)}</p>
+        <p>${Math.round(item.precio)} × {item.cantidad} = ${Math.round(item.precio * item.cantidad)}</p>
       </div>
       <div className="cart-item-actions">
         <div className="quantity-control">

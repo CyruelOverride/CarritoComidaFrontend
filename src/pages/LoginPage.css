@@ -3,14 +3,15 @@
   align-items: center;
   justify-content: center;
   min-height: 100vh;
-  background: #fafafa;
+  background: var(--gray-100);
 }
 
 .login-card {
-  background: white;
+  background: var(--white);
   padding: 2rem 3rem;
   border-radius: 16px;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  box-shadow: var(--shadow-lg);
+  border: 1px solid var(--gray-300);
   width: 100%;
   max-width: 400px;
 }
@@ -18,6 +19,8 @@
 .login-card h2 {
   text-align: center;
   margin-bottom: 1.5rem;
+  color: var(--gray-900);
+  font-weight: 700;
 }
 
 .form-group {
@@ -33,28 +36,40 @@
 .form-group input {
   width: 100%;
   padding: 0.6rem 1rem;
-  border: 1px solid #ccc;
+  border: 2px solid var(--gray-300);
   border-radius: 8px;
+  background: var(--white);
+  color: var(--gray-900);
+  transition: all 0.2s;
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
 }
 
 .btn {
   width: 100%;
   padding: 0.8rem;
   border: none;
-  background: #007bff;
-  color: white;
+  background: var(--primary);
+  color: var(--white);
   font-weight: 600;
   border-radius: 8px;
   cursor: pointer;
+  transition: all 0.2s;
 }
 
 .btn:hover {
-  background: #0056b3;
+  background: var(--primary-dark);
+  box-shadow: var(--shadow-md);
 }
 
 .error {
-  color: red;
+  color: var(--danger);
   font-size: 0.9rem;
   margin-top: 0.5rem;
   text-align: center;
+  font-weight: 500;
 }
