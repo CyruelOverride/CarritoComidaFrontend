@@ -29,9 +29,6 @@ function Header({ productos = [] }) {
             <Link to="/" className={`nav-link ${isActive('/') ? 'active' : ''}`}>
               Inicio
             </Link>
-            <Link to="/contacto" className={`nav-link ${isActive('/contacto') ? 'active' : ''}`}>
-              Contacto
-            </Link>
           </div>
           
           <div className="header-nav-center">
